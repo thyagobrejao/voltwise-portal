@@ -1,0 +1,331 @@
+{
+  "nav": {
+    "home": "Início",
+    "features": "Recursos",
+    "howItWorks": "Como funciona",
+    "benefits": "Benefícios",
+    "pricing": "Planos",
+    "login": "Entrar",
+    "getStarted": "Começar agora",
+    "dashboard": "Dashboard",
+    "chargers": "Carregadores",
+    "sessions": "Sessões",
+    "settings": "Configurações",
+    "logout": "Sair",
+    "overview": "Visão Geral"
+  },
+  "hero": {
+    "badge": "Novo · Integração OCPP 2.0.1",
+    "title": "Carregamento Inteligente para",
+    "highlight": "Hotelaria Moderna",
+    "subtitle": "Integre carregadores EV, monitore em tempo real e aumente a satisfação dos seus hóspedes com uma plataforma unificada e intuitiva.",
+    "cta": "Começar gratuitamente",
+    "demo": "Ver demonstração",
+    "stats": {
+      "hotels": "hotéis ativos",
+      "chargers": "carregadores conectados",
+      "uptime": "uptime garantido"
+    }
+  },
+  "features": {
+    "title": "Tudo que você precisa em",
+    "highlight": "uma plataforma",
+    "subtitle": "Ferramentas poderosas para gerenciar sua infraestrutura de carregamento EV com eficiência e precisão.",
+    "items": {
+      "ocpp": {
+        "title": "Integração OCPP",
+        "description": "Compatível com todos os carregadores OCPP 1.6 e 2.0.1. Plug & play com configuração simples."
+      },
+      "realtime": {
+        "title": "Monitoramento em Tempo Real",
+        "description": "Acompanhe o status de cada carregador, sessões ativas e consumo de energia ao vivo."
+      },
+      "multisite": {
+        "title": "Múltiplos Locais",
+        "description": "Gerencie toda sua rede de carregamento a partir de uma única interface centralizada."
+      },
+      "reports": {
+        "title": "Relatórios e Análises",
+        "description": "Insights detalhados sobre uso, receita e eficiência energética com exportação de dados."
+      },
+      "payments": {
+        "title": "Pagamento Integrado",
+        "description": "Monetize sua rede com múltiplas opções de pagamento e modelos de precificação flexíveis."
+      },
+      "support": {
+        "title": "Suporte 24/7",
+        "description": "Equipe especializada disponível a qualquer hora para resolver problemas rapidamente."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Configure em",
+    "highlight": "minutos",
+    "subtitle": "Um processo simples e guiado para colocar sua rede de carregamento em funcionamento.",
+    "steps": {
+      "connect": {
+        "title": "Conecte seus carregadores",
+        "description": "Integre seus carregadores existentes via OCPP. Compatível com todas as marcas principais do mercado."
+      },
+      "configure": {
+        "title": "Configure sua rede",
+        "description": "Defina grupos, tarifas, horários e permissões de acesso de forma visual e intuitiva."
+      },
+      "monitor": {
+        "title": "Monitore em tempo real",
+        "description": "Acompanhe todas as sessões, status e métricas a partir do dashboard centralizado."
+      },
+      "optimize": {
+        "title": "Otimize e maximize",
+        "description": "Use os relatórios e análises para otimizar o uso e aumentar sua receita continuamente."
+      }
+    }
+  },
+  "benefits": {
+    "title": "Por que hotéis escolhem",
+    "highlight": "VoltWise",
+    "subtitle": "Transforme sua hospedagem em um destino preferido para motoristas de veículos elétricos.",
+    "items": {
+      "guests": {
+        "title": "Atraia Hóspedes Premium",
+        "description": "Viajantes de EV têm renda 40% maior e escolhem hotéis com infraestrutura de carregamento.",
+        "stat": "+40%",
+        "statLabel": "ticket médio"
+      },
+      "revenue": {
+        "title": "Nova Fonte de Receita",
+        "description": "Monetize sua infraestrutura com cobrança por kWh, por sessão ou assinatura mensal.",
+        "stat": "+R$12k",
+        "statLabel": "receita mensal média"
+      },
+      "esg": {
+        "title": "Conformidade ESG",
+        "description": "Demonstre compromisso com sustentabilidade e melhore seu score ESG com relatórios automáticos.",
+        "stat": "A+",
+        "statLabel": "certificação verde"
+      },
+      "support": {
+        "title": "Suporte Especializado",
+        "description": "Equipe dedicada de hotelaria EV para garantir a melhor experiência para seus hóspedes.",
+        "stat": "98%",
+        "statLabel": "satisfação dos clientes"
+      }
+    }
+  },
+  "cta": {
+    "title": "Pronto para transformar",
+    "highlight": "sua hospedagem?",
+    "subtitle": "Junte-se a mais de 150 hotéis que já escolheram a VoltWise para sua infraestrutura de carregamento EV.",
+    "placeholder": "seu@email.com",
+    "button": "Começar gratuitamente",
+    "note": "Sem cartão de crédito · 14 dias grátis · Cancele quando quiser"
+  },
+  "footer": {
+    "tagline": "Plataforma inteligente de carregamento EV para hotelaria moderna.",
+    "product": "Produto",
+    "company": "Empresa",
+    "resources": "Recursos",
+    "links": {
+      "dashboard": "Dashboard",
+      "features": "Recursos",
+      "pricing": "Planos",
+      "api": "API",
+      "about": "Sobre nós",
+      "blog": "Blog",
+      "careers": "Carreiras",
+      "contact": "Contato",
+      "docs": "Documentação",
+      "changelog": "Changelog",
+      "status": "Status",
+      "terms": "Termos",
+      "privacy": "Privacidade"
+    },
+    "copyright": "© {year} VoltWise. Todos os direitos reservados."
+  },
+  "auth": {
+    "login": {
+      "title": "Entrar na sua conta",
+      "subtitle": "Bem-vindo de volta! Faça login para continuar.",
+      "email": "E-mail",
+      "password": "Senha",
+      "remember": "Lembrar de mim",
+      "forgot": "Esqueceu a senha?",
+      "button": "Entrar",
+      "loading": "Entrando...",
+      "noAccount": "Não tem uma conta?",
+      "register": "Criar conta",
+      "error": "E-mail ou senha incorretos. Tente novamente.",
+      "demoHint": "Demo: use qualquer e-mail + senha com 6+ caracteres"
+    },
+    "register": {
+      "title": "Criar sua conta",
+      "subtitle": "Comece sua jornada com a VoltWise hoje.",
+      "name": "Nome completo",
+      "email": "E-mail corporativo",
+      "organization": "Nome da empresa/hotel",
+      "password": "Senha",
+      "confirm": "Confirmar senha",
+      "button": "Criar conta",
+      "loading": "Criando conta...",
+      "hasAccount": "Já tem uma conta?",
+      "login": "Entrar",
+      "terms": "Ao criar uma conta, você concorda com nossos",
+      "termsLink": "Termos de Serviço",
+      "and": "e",
+      "privacyLink": "Política de Privacidade",
+      "error": "Erro ao criar conta. Verifique os dados e tente novamente.",
+      "passwordMismatch": "As senhas não coincidem."
+    }
+  },
+  "dashboard": {
+    "overview": {
+      "title": "Visão Geral",
+      "subtitle": "Resumo da sua rede de carregamento",
+      "totalChargers": "Total de Carregadores",
+      "activeSessions": "Sessões Ativas",
+      "energyConsumed": "Energia Consumida",
+      "revenue": "Receita do Mês",
+      "recentActivity": "Atividade Recente",
+      "noActivity": "Nenhuma atividade recente",
+      "quickActions": "Ações Rápidas",
+      "addCharger": "Adicionar Carregador",
+      "viewSessions": "Ver Sessões",
+      "viewReports": "Ver Relatórios"
+    },
+    "chargers": {
+      "title": "Carregadores",
+      "subtitle": "Gerencie todos os seus carregadores",
+      "addCharger": "Adicionar Carregador",
+      "search": "Buscar carregadores...",
+      "filter": "Filtrar por status",
+      "all": "Todos",
+      "table": {
+        "id": "ID",
+        "name": "Nome",
+        "location": "Localização",
+        "status": "Status",
+        "power": "Potência",
+        "lastSeen": "Última conexão",
+        "actions": "Ações"
+      },
+      "status": {
+        "available": "Disponível",
+        "charging": "Carregando",
+        "offline": "Offline",
+        "error": "Erro",
+        "reserved": "Reservado"
+      },
+      "empty": "Nenhum carregador encontrado",
+      "emptyDesc": "Adicione seu primeiro carregador para começar.",
+      "detail": "Ver detalhes",
+      "modal": {
+        "title": "Adicionar Carregador",
+        "name": "Nome do carregador",
+        "namePlaceholder": "Ex: Carregador Estacionamento A",
+        "identifier": "ID OCPP",
+        "identifierPlaceholder": "Ex: CP-001",
+        "identifierHint": "Identificador único usado pelo carregador para se conectar ao servidor OCPP.",
+        "submit": "Adicionar",
+        "requiredFields": "Preencha todos os campos obrigatórios.",
+        "error": "Erro ao adicionar carregador. Tente novamente."
+      }
+    },
+    "chargerDetail": {
+      "activeSession": "Sessão ativa",
+      "elapsed": "Tempo decorrido",
+      "energy": "Energia",
+      "transaction": "ID da sessão",
+      "totalSessions": "Total de sessões",
+      "totalEnergy": "Energia total",
+      "avgDuration": "Duração média",
+      "successRate": "Taxa de sucesso",
+      "sessionsHistory": "Histórico de sessões",
+      "noSessions": "Nenhuma sessão encontrada para este carregador.",
+      "notFound": "Carregador não encontrado.",
+      "table": {
+        "id": "ID",
+        "start": "Início",
+        "end": "Fim",
+        "duration": "Duração",
+        "energy": "Energia",
+        "status": "Status"
+      }
+    },
+    "sessions": {
+      "title": "Sessões",
+      "subtitle": "Histórico de todas as sessões de carregamento",
+      "search": "Buscar sessões...",
+      "filter": "Filtrar por status",
+      "all": "Todas",
+      "table": {
+        "id": "ID",
+        "charger": "Carregador",
+        "user": "Usuário",
+        "start": "Início",
+        "duration": "Duração",
+        "energy": "Energia",
+        "cost": "Custo",
+        "status": "Status"
+      },
+      "status": {
+        "active": "Ativa",
+        "completed": "Concluída",
+        "failed": "Falhou",
+        "stopped": "Interrompida"
+      },
+      "empty": "Nenhuma sessão encontrada",
+      "emptyDesc": "As sessões de carregamento aparecerão aqui."
+    },
+    "settings": {
+      "title": "Configurações",
+      "profile": "Perfil",
+      "organization": "Organização",
+      "notifications": "Notificações",
+      "security": "Segurança",
+      "profileInfo": "Informações do Perfil",
+      "name": "Nome",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "phonePlaceholder": "+55 (11) 99999-9999",
+      "save": "Salvar alterações",
+      "saving": "Salvando...",
+      "saved": "Salvo com sucesso!",
+      "orgInfo": "Informações da Organização",
+      "orgName": "Nome da organização",
+      "orgType": "Tipo",
+      "orgAddress": "Endereço",
+      "orgWebsite": "Website",
+      "notifTitle": "Preferências de Notificação",
+      "notifSession": "Alertas de sessão",
+      "notifOffline": "Carregador offline",
+      "notifReport": "Relatório semanal",
+      "notifMarketing": "Novidades e atualizações"
+    }
+  },
+  "common": {
+    "saving": "Salvando...",
+    "loading": "Carregando...",
+    "live": "Ao vivo",
+    "reconnecting": "Reconectando...",
+    "justNow": "Agora",
+    "ago": "atrás",
+    "error": "Ocorreu um erro. Tente novamente.",
+    "retry": "Tentar novamente",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Salvar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "view": "Visualizar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "search": "Buscar",
+    "noData": "Nenhum dado disponível",
+    "optional": "Opcional",
+    "required": "Obrigatório"
+  },
+  "language": {
+    "pt": "Português",
+    "en": "English"
+  }
+}

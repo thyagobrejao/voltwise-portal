@@ -1,0 +1,331 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "howItWorks": "How it works",
+    "benefits": "Benefits",
+    "pricing": "Pricing",
+    "login": "Sign in",
+    "getStarted": "Get started",
+    "dashboard": "Dashboard",
+    "chargers": "Chargers",
+    "sessions": "Sessions",
+    "settings": "Settings",
+    "logout": "Sign out",
+    "overview": "Overview"
+  },
+  "hero": {
+    "badge": "New · OCPP 2.0.1 Integration",
+    "title": "Smart EV Charging for",
+    "highlight": "Modern Hospitality",
+    "subtitle": "Integrate EV chargers, monitor in real-time and increase guest satisfaction with a unified and intuitive platform.",
+    "cta": "Start for free",
+    "demo": "View demo",
+    "stats": {
+      "hotels": "active hotels",
+      "chargers": "connected chargers",
+      "uptime": "guaranteed uptime"
+    }
+  },
+  "features": {
+    "title": "Everything you need in",
+    "highlight": "one platform",
+    "subtitle": "Powerful tools to manage your EV charging infrastructure with efficiency and precision.",
+    "items": {
+      "ocpp": {
+        "title": "OCPP Integration",
+        "description": "Compatible with all OCPP 1.6 and 2.0.1 chargers. Plug & play with simple configuration."
+      },
+      "realtime": {
+        "title": "Real-time Monitoring",
+        "description": "Track the status of each charger, active sessions and energy consumption live."
+      },
+      "multisite": {
+        "title": "Multi-site Management",
+        "description": "Manage your entire charging network from a single centralized interface."
+      },
+      "reports": {
+        "title": "Reports & Analytics",
+        "description": "Detailed insights on usage, revenue and energy efficiency with data export."
+      },
+      "payments": {
+        "title": "Integrated Payments",
+        "description": "Monetize your network with multiple payment options and flexible pricing models."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Expert team available at any time to resolve issues quickly."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Set up in",
+    "highlight": "minutes",
+    "subtitle": "A simple, guided process to get your charging network up and running.",
+    "steps": {
+      "connect": {
+        "title": "Connect your chargers",
+        "description": "Integrate your existing chargers via OCPP. Compatible with all major brands on the market."
+      },
+      "configure": {
+        "title": "Configure your network",
+        "description": "Set groups, rates, schedules and access permissions in a visual and intuitive way."
+      },
+      "monitor": {
+        "title": "Monitor in real-time",
+        "description": "Track all sessions, status and metrics from the centralized dashboard."
+      },
+      "optimize": {
+        "title": "Optimize and maximize",
+        "description": "Use reports and analytics to optimize usage and continuously increase your revenue."
+      }
+    }
+  },
+  "benefits": {
+    "title": "Why hotels choose",
+    "highlight": "VoltWise",
+    "subtitle": "Transform your hotel into the preferred destination for electric vehicle drivers.",
+    "items": {
+      "guests": {
+        "title": "Attract Premium Guests",
+        "description": "EV travelers have 40% higher income and choose hotels with charging infrastructure.",
+        "stat": "+40%",
+        "statLabel": "average ticket"
+      },
+      "revenue": {
+        "title": "New Revenue Stream",
+        "description": "Monetize your infrastructure with per-kWh, per-session or monthly subscription charging.",
+        "stat": "+$3k",
+        "statLabel": "average monthly revenue"
+      },
+      "esg": {
+        "title": "ESG Compliance",
+        "description": "Demonstrate sustainability commitment and improve your ESG score with automatic reports.",
+        "stat": "A+",
+        "statLabel": "green certification"
+      },
+      "support": {
+        "title": "Specialized Support",
+        "description": "Dedicated hospitality EV team to ensure the best experience for your guests.",
+        "stat": "98%",
+        "statLabel": "customer satisfaction"
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to transform",
+    "highlight": "your hotel?",
+    "subtitle": "Join over 150 hotels that have already chosen VoltWise for their EV charging infrastructure.",
+    "placeholder": "your@email.com",
+    "button": "Start for free",
+    "note": "No credit card required · 14-day free trial · Cancel anytime"
+  },
+  "footer": {
+    "tagline": "Smart EV charging platform for modern hospitality.",
+    "product": "Product",
+    "company": "Company",
+    "resources": "Resources",
+    "links": {
+      "dashboard": "Dashboard",
+      "features": "Features",
+      "pricing": "Pricing",
+      "api": "API",
+      "about": "About us",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "Contact",
+      "docs": "Documentation",
+      "changelog": "Changelog",
+      "status": "Status",
+      "terms": "Terms",
+      "privacy": "Privacy"
+    },
+    "copyright": "© {year} VoltWise. All rights reserved."
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in to your account",
+      "subtitle": "Welcome back! Sign in to continue.",
+      "email": "Email",
+      "password": "Password",
+      "remember": "Remember me",
+      "forgot": "Forgot password?",
+      "button": "Sign in",
+      "loading": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "register": "Create account",
+      "error": "Invalid email or password. Please try again.",
+      "demoHint": "Demo: use any email + password with 6+ characters"
+    },
+    "register": {
+      "title": "Create your account",
+      "subtitle": "Start your VoltWise journey today.",
+      "name": "Full name",
+      "email": "Corporate email",
+      "organization": "Company/hotel name",
+      "password": "Password",
+      "confirm": "Confirm password",
+      "button": "Create account",
+      "loading": "Creating account...",
+      "hasAccount": "Already have an account?",
+      "login": "Sign in",
+      "terms": "By creating an account, you agree to our",
+      "termsLink": "Terms of Service",
+      "and": "and",
+      "privacyLink": "Privacy Policy",
+      "error": "Error creating account. Please check your details and try again.",
+      "passwordMismatch": "Passwords do not match."
+    }
+  },
+  "dashboard": {
+    "overview": {
+      "title": "Overview",
+      "subtitle": "Summary of your charging network",
+      "totalChargers": "Total Chargers",
+      "activeSessions": "Active Sessions",
+      "energyConsumed": "Energy Consumed",
+      "revenue": "Monthly Revenue",
+      "recentActivity": "Recent Activity",
+      "noActivity": "No recent activity",
+      "quickActions": "Quick Actions",
+      "addCharger": "Add Charger",
+      "viewSessions": "View Sessions",
+      "viewReports": "View Reports"
+    },
+    "chargers": {
+      "title": "Chargers",
+      "subtitle": "Manage all your chargers",
+      "addCharger": "Add Charger",
+      "search": "Search chargers...",
+      "filter": "Filter by status",
+      "all": "All",
+      "table": {
+        "id": "ID",
+        "name": "Name",
+        "location": "Location",
+        "status": "Status",
+        "power": "Power",
+        "lastSeen": "Last seen",
+        "actions": "Actions"
+      },
+      "status": {
+        "available": "Available",
+        "charging": "Charging",
+        "offline": "Offline",
+        "error": "Error",
+        "reserved": "Reserved"
+      },
+      "empty": "No chargers found",
+      "emptyDesc": "Add your first charger to get started.",
+      "detail": "View details",
+      "modal": {
+        "title": "Add Charger",
+        "name": "Charger name",
+        "namePlaceholder": "e.g. Parking Lot A Charger",
+        "identifier": "OCPP ID",
+        "identifierPlaceholder": "e.g. CP-001",
+        "identifierHint": "Unique identifier the charger uses to connect to the OCPP server.",
+        "submit": "Add Charger",
+        "requiredFields": "Please fill in all required fields.",
+        "error": "Failed to add charger. Please try again."
+      }
+    },
+    "chargerDetail": {
+      "activeSession": "Active session",
+      "elapsed": "Elapsed time",
+      "energy": "Energy",
+      "transaction": "Session ID",
+      "totalSessions": "Total sessions",
+      "totalEnergy": "Total energy",
+      "avgDuration": "Avg duration",
+      "successRate": "Success rate",
+      "sessionsHistory": "Sessions history",
+      "noSessions": "No sessions found for this charger.",
+      "notFound": "Charger not found.",
+      "table": {
+        "id": "ID",
+        "start": "Start",
+        "end": "End",
+        "duration": "Duration",
+        "energy": "Energy",
+        "status": "Status"
+      }
+    },
+    "sessions": {
+      "title": "Sessions",
+      "subtitle": "History of all charging sessions",
+      "search": "Search sessions...",
+      "filter": "Filter by status",
+      "all": "All",
+      "table": {
+        "id": "ID",
+        "charger": "Charger",
+        "user": "User",
+        "start": "Start",
+        "duration": "Duration",
+        "energy": "Energy",
+        "cost": "Cost",
+        "status": "Status"
+      },
+      "status": {
+        "active": "Active",
+        "completed": "Completed",
+        "failed": "Failed",
+        "stopped": "Stopped"
+      },
+      "empty": "No sessions found",
+      "emptyDesc": "Charging sessions will appear here."
+    },
+    "settings": {
+      "title": "Settings",
+      "profile": "Profile",
+      "organization": "Organization",
+      "notifications": "Notifications",
+      "security": "Security",
+      "profileInfo": "Profile Information",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "save": "Save changes",
+      "saving": "Saving...",
+      "saved": "Saved successfully!",
+      "orgInfo": "Organization Information",
+      "orgName": "Organization name",
+      "orgType": "Type",
+      "orgAddress": "Address",
+      "orgWebsite": "Website",
+      "notifTitle": "Notification Preferences",
+      "notifSession": "Session alerts",
+      "notifOffline": "Charger offline",
+      "notifReport": "Weekly report",
+      "notifMarketing": "News and updates"
+    }
+  },
+  "common": {
+    "saving": "Saving...",
+    "loading": "Loading...",
+    "live": "Live",
+    "reconnecting": "Reconnecting...",
+    "justNow": "Just now",
+    "ago": "ago",
+    "error": "An error occurred. Please try again.",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "search": "Search",
+    "noData": "No data available",
+    "optional": "Optional",
+    "required": "Required"
+  },
+  "language": {
+    "pt": "Português",
+    "en": "English"
+  }
+}
