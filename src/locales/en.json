@@ -154,8 +154,11 @@
       "loading": "Signing in...",
       "noAccount": "Don't have an account?",
       "register": "Create account",
-      "error": "Invalid email or password. Please try again.",
-      "demoHint": "Demo: use any email + password with 6+ characters"
+      "error": "An unexpected error occurred. Please try again.",
+      "invalidCredentials": "Invalid email or password. You have {remaining} attempt(s) remaining.",
+      "tooManyAttempts": "Too many login attempts. Please try again in {seconds} seconds.",
+      "lockedOut": "Account temporarily locked. Please wait {seconds} seconds before trying again.",
+      "waitMessage": "Please wait {seconds}s before trying again..."
     },
     "register": {
       "title": "Create your account",

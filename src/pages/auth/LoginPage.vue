@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onUnmounted } from 'vue'
 import { useRouter, RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useAuthStore } from '@/stores/auth'
 import { BoltIcon, EyeIcon, EyeSlashIcon } from '@heroicons/vue/24/outline'
+import axios from 'axios'
 
 const { t } = useI18n()
 const router = useRouter()
@@ -15,12 +16,84 @@ const remember = ref(false)
 const showPassword = ref(false)
 const errorMsg = ref('')
 
+// ── Brute-force protection (client-side) ──────────────────────────────────
+const MAX_ATTEMPTS = 5
+const BASE_LOCKOUT_SECONDS = 30
+
+const failedAttempts = ref(0)
+const lockedUntil = ref(0)
+const lockoutRemaining = ref(0)
+let lockoutTimer: ReturnType<typeof setInterval> | null = null
+
+function startLockoutCountdown(seconds: number) {
+  lockedUntil.value = Date.now() + seconds * 1000
+  updateRemaining()
+
+  if (lockoutTimer) clearInterval(lockoutTimer)
+  lockoutTimer = setInterval(() => {
+    updateRemaining()
+    if (lockoutRemaining.value <= 0) {
+      clearInterval(lockoutTimer!)
+      lockoutTimer = null
+    }
+  }, 1000)
+}
+
+function updateRemaining() {
+  lockoutRemaining.value = Math.max(0, Math.ceil((lockedUntil.value - Date.now()) / 1000))
+}
+
+const isLockedOut = () => lockoutRemaining.value > 0
+
+onUnmounted(() => {
+  if (lockoutTimer) clearInterval(lockoutTimer)
+})
+
+// ── Login handler ─────────────────────────────────────────────────────────
 async function handleLogin() {
   errorMsg.value = ''
+
+  if (isLockedOut()) {
+    errorMsg.value = t('auth.login.lockedOut', { seconds: lockoutRemaining.value })
+    return
+  }
+
   try {
     await authStore.login(email.value, password.value)
+    // Reset on success
+    failedAttempts.value = 0
+    lockedUntil.value = 0
+    lockoutRemaining.value = 0
     router.push({ name: 'overview' })
-  } catch {
+  } catch (err) {
+    if (axios.isAxiosError(err)) {
+      const status = err.response?.status
+
+      if (status === 429) {
+        // Server-side rate limit hit — read Retry-After header
+        const retryAfter = parseInt(err.response?.headers?.['retry-after'] || '60', 10)
+        startLockoutCountdown(retryAfter)
+        errorMsg.value = t('auth.login.tooManyAttempts', { seconds: retryAfter })
+        return
+      }
+
+      if (status === 401) {
+        failedAttempts.value++
+
+        if (failedAttempts.value >= MAX_ATTEMPTS) {
+          const lockoutSeconds = BASE_LOCKOUT_SECONDS * Math.pow(2, Math.floor(failedAttempts.value / MAX_ATTEMPTS) - 1)
+          startLockoutCountdown(lockoutSeconds)
+          errorMsg.value = t('auth.login.lockedOut', { seconds: lockoutSeconds })
+          failedAttempts.value = 0
+          return
+        }
+
+        const remaining = MAX_ATTEMPTS - failedAttempts.value
+        errorMsg.value = t('auth.login.invalidCredentials', { remaining })
+        return
+      }
+    }
+
     errorMsg.value = t('auth.login.error')
   }
 }
@@ -49,14 +122,23 @@ async function handleLogin() {
         <!-- Error -->
         <div
           v-if="errorMsg"
-          class="mb-4 px-4 py-3 rounded-xl bg-red-50 border border-red-100 text-red-700 text-sm"
+          class="mb-4 px-4 py-3 rounded-xl bg-red-50 border border-red-100 text-red-700 text-sm flex items-start gap-2"
         >
-          {{ errorMsg }}
+          <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+          </svg>
+          <span>{{ errorMsg }}</span>
         </div>
 
-        <!-- Demo hint -->
-        <div class="mb-5 px-4 py-3 rounded-xl bg-primary-50 border border-primary-100 text-primary-700 text-xs">
-          💡 {{ t('auth.login.demoHint') }}
+        <!-- Lockout warning -->
+        <div
+          v-if="lockoutRemaining > 0"
+          class="mb-4 px-4 py-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-sm flex items-center gap-2"
+        >
+          <svg class="w-5 h-5 flex-shrink-0 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>{{ t('auth.login.waitMessage', { seconds: lockoutRemaining }) }}</span>
         </div>
 
         <form class="space-y-4" @submit.prevent="handleLogin">
@@ -72,6 +154,7 @@ async function handleLogin() {
               autocomplete="email"
               class="input-field"
               placeholder="joao@hotel.com"
+              :disabled="isLockedOut()"
             />
           </div>
 
@@ -88,6 +171,7 @@ async function handleLogin() {
                 autocomplete="current-password"
                 class="input-field pr-10"
                 placeholder="••••••••"
+                :disabled="isLockedOut()"
               />
               <button
                 type="button"
@@ -118,7 +202,7 @@ async function handleLogin() {
           <!-- Submit -->
           <button
             type="submit"
-            :disabled="authStore.loading"
+            :disabled="authStore.loading || isLockedOut()"
             class="btn-primary w-full justify-center py-3 text-sm"
           >
             <svg v-if="authStore.loading" class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

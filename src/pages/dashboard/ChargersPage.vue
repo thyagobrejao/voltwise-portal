@@ -96,6 +96,10 @@ async function submitForm() {
     const resp = (err as { response?: { data?: Record<string, unknown> } }).response?.data
     if (resp?.identifier) {
       formError.value = String((resp.identifier as string[])[0] ?? resp.identifier)
+    } else if (resp?.detail) {
+      formError.value = String(resp.detail)
+    } else if (resp?.non_field_errors) {
+      formError.value = String((resp.non_field_errors as string[])[0])
     } else {
       formError.value = t('dashboard.chargers.modal.error')
     }

@@ -154,8 +154,11 @@
       "loading": "Entrando...",
       "noAccount": "Não tem uma conta?",
       "register": "Criar conta",
-      "error": "E-mail ou senha incorretos. Tente novamente.",
-      "demoHint": "Demo: use qualquer e-mail + senha com 6+ caracteres"
+      "error": "Ocorreu um erro inesperado. Tente novamente.",
+      "invalidCredentials": "E-mail ou senha incorretos. Você tem mais {remaining} tentativa(s).",
+      "tooManyAttempts": "Muitas tentativas de login. Tente novamente em {seconds} segundos.",
+      "lockedOut": "Conta temporariamente bloqueada. Aguarde {seconds} segundos antes de tentar novamente.",
+      "waitMessage": "Aguarde {seconds}s antes de tentar novamente..."
     },
     "register": {
       "title": "Criar sua conta",
